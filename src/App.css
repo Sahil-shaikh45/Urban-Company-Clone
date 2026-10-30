@@ -1,0 +1,98 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+main {
+  flex: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-text-white:hover {
+  color: white !important;
+  transition: var(--transition);
+}
+
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+
+/* Booking Flow Card */
+.list-group-item {
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  border: 1px solid #eee !important;
+  transition: var(--transition);
+}
+
+.list-group-item:hover {
+  background-color: var(--bg-soft);
+  border-color: var(--primary-color) !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Become Partner Banner */
+.become-partner-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 40px;
+  min-height: 450px;
+  display: flex;
+}
+
+.icon-circle-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.partner-img-wrapper {
+  height: 100%;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.banner-bg-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* responsive fixes */
+@media (max-width: 576px) {
+  .hero-search-input {
+    font-size: 0.9rem;
+    padding: 12px 40px 12px 15px;
+  }
+  .display-4 {
+    font-size: 2.2rem;
+  }
+  .offer-card {
+    min-width: 260px;
+    height: 150px;
+  }
+}

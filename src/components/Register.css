@@ -1,0 +1,204 @@
+.register-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 40px;
+}
+
+.register-container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    gap: 30px;
+}
+
+.register-card {
+    flex: 1;
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.register-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.register-header p {
+    color: #666;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-advanced {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group-advanced label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.input-wrapper-advanced {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 5px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper-advanced:focus-within {
+    border-color: #667eea;
+    background: white;
+}
+
+.input-icon-advanced {
+    margin-right: 12px;
+    font-size: 1.1rem;
+    opacity: 0.6;
+}
+
+.prefix-advanced {
+    font-weight: 600;
+    color: #667eea;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.input-wrapper-advanced input,
+.input-wrapper-advanced select {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.register-submit-btn {
+    margin-top: 10px;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.register-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.register-footer a {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.terms-text-small {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.terms-text-small span {
+    color: #667eea;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Info Box */
+.register-info-box {
+    flex: 0 0 320px;
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.register-info-box h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.benefits-list li {
+    display: flex;
+    gap: 15px;
+}
+
+.benefit-icon {
+    font-size: 2rem;
+}
+
+.benefits-list h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.benefits-list p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+@media (max-width: 850px) {
+    .register-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    
+    .register-info-box {
+        flex: none;
+    }
+}

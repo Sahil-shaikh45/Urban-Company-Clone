@@ -1,0 +1,405 @@
+.confirmation-page {
+    min-height: 100vh;
+    background: #f8fafc;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.confirmation-card {
+    max-width: 550px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.success-circle {
+    width: 80px;
+    height: 80px;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Tracking Line */
+.tracking-bar-wrapper {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+.tracking-line-container {
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    position: relative;
+    margin: 40px 0 10px;
+}
+
+.tracking-line-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    border-radius: 10px;
+}
+
+.tracking-icon-runner {
+    position: absolute;
+    top: -45px;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: 3px solid #6366f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+    font-size: 1.4rem;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    z-index: 2;
+}
+
+.pulse-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.4);
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.tiny-text {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tracking-stat-card {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 18px;
+    border: 1px solid #f1f5f9;
+}
+
+/* Professional Card */
+.prof-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-call-pro {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #6366f1;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-call-pro:hover {
+    transform: scale(1.1);
+    background: #4f46e5;
+}
+
+/* Calling Simulation */
+.calling-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.calling-content {
+    text-align: center;
+}
+
+.calling-avatar-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+}
+
+.calling-avatar-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    position: relative;
+    z-index: 2;
+}
+
+.calling-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    animation: callingPulse 2s infinite;
+    z-index: 1;
+}
+
+@keyframes callingPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.calling-status {
+    opacity: 0.7;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.calling-actions {
+    margin-top: 50px;
+}
+
+.btn-end-call {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f43f5e;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3);
+}
+
+.btn-end-call:hover {
+    transform: scale(1.1);
+    background: #e11d48;
+}
+
+/* Map Modal Styles */
+.map-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+}
+
+.map-modal {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
+}
+
+.map-header {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.drag-handle {
+  width: 40px;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin: 0 auto 15px;
+}
+
+.btn-close-map {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.map-container-sim {
+  height: 400px;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.pune-map-bg {
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(#e2e8f0 1px, transparent 1px),
+    linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: relative;
+}
+
+.map-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.label-hinjewadi { left: 10%; top: 85%; }
+.label-baner { left: 75%; top: 15%; }
+.label-wakad { left: 40%; top: 60%; }
+.label-balewadi { left: 60%; top: 40%; }
+
+.map-path-svg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+.marker {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.marker-customer {
+  color: #6366f1;
+  font-size: 24px;
+}
+
+.marker-ping {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 50%;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  z-index: -1;
+}
+
+@keyframes ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+.marker-label {
+  background: #1e293b;
+  color: white;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.marker-pro {
+  z-index: 20;
+}
+
+.marker-pro-card {
+  background: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 5px;
+}
+
+.marker-pro-card img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.marker-pro-card span {
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pro-icon-box {
+  width: 32px;
+  height: 32px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  border: 2px solid white;
+}
+
+.status-indicator-live {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-indicator-live::after {
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  border: 2px solid #10b981;
+  border-radius: 50%;
+  animation: pulse-live 1.5s infinite;
+}
+
+@keyframes pulse-live {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
